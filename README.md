@@ -4,9 +4,13 @@ The files in this repository were used to configure the network depicted below.
 
 ![](Diagrams/diagram.png)
 
-These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the _____ file may be used to install only certain pieces of it, such as Filebeat.
+These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the config or yml files may be used to install only certain pieces of it, such as Filebeat.
 
-  - _TODO: Enter the playbook file._
+  - [Ansible Config](https://github.com/AnthonyMaret/project13/blob/main/Ansible/ansible.cfg)
+  - [Filebeat Config](https://github.com/AnthonyMaret/project13/blob/main/Ansible/filebeat-config.yml)
+  - [Filebeat Playbook](https://github.com/AnthonyMaret/project13/blob/main/Ansible/filebeat-playbook.yml)
+  - [Metricbeat Config](https://github.com/AnthonyMaret/project13/blob/main/Ansible/metricbeat-config.yml)
+  - [Metricbeat Playbook](https://github.com/AnthonyMaret/project13/blob/main/Ansible/metricbeat-playbook.yml)
 
 This document contains the following details:
 - Description of the Topology
@@ -29,7 +33,6 @@ Integrating an ELK server allows users to easily monitor the vulnerable VMs for 
 - _TODO: What does Metricbeat record?_
 
 The configuration details of each machine may be found below.
-_Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.
 
 | Name    | Function |              IP Address                  |  OS   |
 |---------|----------|------------------------------------------|-------|
