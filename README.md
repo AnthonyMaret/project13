@@ -32,12 +32,12 @@ Load balancing ensures that the application will be highly available, in additio
 - What is the advantage of a jump box?
 - Answer: Another layer of security, which could be associated with the defense-in-depth model. Using a jumpbox seperates the local machine from the web servers, web-1 and web-2 in this case. Making them only available after being SSH'd in from the jumpbox.
 
-Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the _____ and system _____.
+Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the data and system logs.
 - What does Filebeat watch for?
-- Answer:
+- Answer: Filebeat watches for changes that have happened in the file system. It can detail what files have changed, and when.
 
 - What does Metricbeat record?
-- Answer:
+- Answer: Metricbeat monitors system and service metrics running on your server, or servers. Examples can include Apache, MySQL, Nginx, and more.
 
 The configuration details of each machine may be found below.
 
@@ -52,12 +52,12 @@ The configuration details of each machine may be found below.
 
 The machines on the internal network are not exposed to the public Internet. 
 
-Only the _____ machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
-- Whitelisted IP addresses:
+Only the ELK machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
+- Whitelisted IP addresses: The whitelisted IP address was my own local IP address, 98.31.39.159, through port 5601.
 
 Machines within the network can only be accessed by the jumpbox.
 - Which machine did you allow to access your ELK VM? What was its IP address?
-- Answer: 
+- Answer: The only machine allowed to access the ELK VM was through the ansible container located in the jumpbox virtual machine. The ELK VM's public IP was 20.122.99.157, and it's private IP was 10.1.0.4.
 
 A summary of the access policies in place can be found in the table below.
 
