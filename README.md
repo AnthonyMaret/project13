@@ -74,7 +74,7 @@ Ansible was used to automate configuration of the ELK machine. No configuration 
 - Answer: There are a couple of advantages of using automated configuration with Ansible. The main advantage I would say, would either be time or troubleshooting ease. Using automatic configuration instead of doing the work manually saves much needed time. Secondly, using the same static automatic configuration means that if there is ever troubleshooting that needs done, you only have to look at a single configuration, instead of multiple manual configurations. 
 
 The playbook implements the following tasks:
-- In 3-5 bullets, explain the steps of the ELK installation play. E.g., install Docker; download image; etc.
+- Explain the steps of the ELK installation play. E.g., install Docker; download image; etc.
 - Installed docker.io, python3, and the docker pip3 module
 - Increased the system's virtual memory, and then configured it to use the extra memory 
 - Luanched the docker elk container, and configured it so that it ran on the ports 5601,9200 and 5044
@@ -85,6 +85,10 @@ The following screenshot displays the result of running `docker ps` after succes
 ![](Progress-Screenshots/elk-container-created.PNG)
 
 ### Target Machines & Beats
+Below is a screenshot of the Metricbeat Dashboard on the Kibana website, showing successful connection to my web-1 and web-2 machines.
+
+![](Progress-Screenshots/day2-metricbeat-kibana-webpage.PNG)
+
 This ELK server is configured to monitor the following machines:
 - List the IP addresses of the machines you are monitoring.
 -  Answer: web-1: 10.0.0.5 web-2: 10.0.0.6
