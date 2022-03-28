@@ -27,14 +27,14 @@ The main purpose of this network is to expose a load-balanced and monitored inst
 
 Load balancing ensures that the application will be highly available, in addition to restricting unauthorized connections to the network.
 - What aspect of security do load balancers protect? What is the advantage of a jump box?
-  Answer:
+-  Answer:
 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the _____ and system _____.
 - What does Filebeat watch for?
-  Answer:
+-  Answer:
 
 - What does Metricbeat record?
-  Answer:
+-  Answer:
 
 The configuration details of each machine may be found below.
 
@@ -80,11 +80,11 @@ The following screenshot displays the result of running `docker ps` after succes
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
 - List the IP addresses of the machines you are monitoring.
-  Answer: web-1: 10.0.0.5 web-2: 10.0.0.6
+-  Answer: web-1: 10.0.0.5 web-2: 10.0.0.6
 
 We have installed the following Beats on these machines:
 - Specify which Beats you successfully installed.
-  Answer: Filebeat and Metricbeat
+-  Answer: Filebeat and Metricbeat
 
 These Beats allow us to collect the following information from each machine:
 - _TODO: In 1-2 sentences, explain what kind of data each beat collects, and provide 1 example of what you expect to see. E.g., `Winlogbeat` collects Windows logs, which we use to track user logon events, etc._
@@ -103,3 +103,4 @@ _TODO: Answer the following questions to fill in the blanks:_
 - _Which URL do you navigate to in order to check that the ELK server is running?
 
 _As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
+
