@@ -26,8 +26,11 @@ This document contains the following details:
 The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application.
 
 Load balancing ensures that the application will be highly available, in addition to restricting unauthorized connections to the network.
-- What aspect of security do load balancers protect? What is the advantage of a jump box?
-- Answer:
+- What aspect of security do load balancers protect?
+- Answer: Availability, load balancers distribute traffic. So in the case of one server failure, traffic can be rerouted to another.
+
+- What is the advantage of a jump box?
+- Answer: Another layer of security, which could be associated with the defense-in-depth model. Using a jumpbox seperates the local machine from the web servers, web-1 and web-2 in this case. Making them only available after being SSH'd in from the jumpbox.
 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the _____ and system _____.
 - What does Filebeat watch for?
@@ -50,7 +53,7 @@ The configuration details of each machine may be found below.
 The machines on the internal network are not exposed to the public Internet. 
 
 Only the _____ machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
-- _TODO: Add whitelisted IP addresses_
+- Whitelisted IP addresses:
 
 Machines within the network can only be accessed by the jumpbox.
 - Which machine did you allow to access your ELK VM? What was its IP address?
@@ -61,16 +64,17 @@ A summary of the access policies in place can be found in the table below.
 | Name          | Publicly Accessible | Allowed IP Addresses |
 |---------------|---------------------|----------------------|
 | Jumpbox       | Yes                 | 98.31.39.159         |
-| web-1         | No                  |                      |
-| web-2         | No                  |                      |
+| web-1         | No                  | 10.0.0.4             |
+| web-2         | No                  | 10.0.0.4             |
 | elk           | Yes                 | 98.31.39.159         |
 ### Elk Configuration
 
 Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because...
-- _TODO: What is the main advantage of automating configuration with Ansible?_
+- What is the main advantage of automating configuration with Ansible?
+- Answer:
 
 The playbook implements the following tasks:
-- _TODO: In 3-5 bullets, explain the steps of the ELK installation play. E.g., install Docker; download image; etc._
+- In 3-5 bullets, explain the steps of the ELK installation play. E.g., install Docker; download image; etc.
 - 
 - 
 - 
@@ -98,8 +102,8 @@ These Beats allow us to collect the following information from each machine:
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
 
 SSH into the control node and follow the steps below:
-- Copy the _____ file to _____.
-- Update the _____ file to include...
+- Copy the install-elk.yml file to your ansible container.
+- Update the ____ file to include...
 - Run the playbook, and navigate to ____ to check that the installation worked as expected.
 
 Answer the following questions to fill in the blanks:
