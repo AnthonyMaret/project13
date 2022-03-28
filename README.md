@@ -25,21 +25,25 @@ This document contains the following details:
 
 The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application.
 
-Load balancing ensures that the application will be highly _____, in addition to restricting _____ to the network.
-- _TODO: What aspect of security do load balancers protect? What is the advantage of a jump box?_
+Load balancing ensures that the application will be highly available, in addition to restricting unauthorized connections to the network.
+- What aspect of security do load balancers protect? What is the advantage of a jump box?
+  Answer:
 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the _____ and system _____.
-- _TODO: What does Filebeat watch for?_
-- _TODO: What does Metricbeat record?_
+- What does Filebeat watch for?
+  Answer:
+
+- What does Metricbeat record?
+  Answer:
 
 The configuration details of each machine may be found below.
 
-| Name    | Function |              IP Address                  |  OS   |
-|---------|----------|------------------------------------------|-------|
-| jumpbox | Gateway  | Public: 20.127.15.15  Private: 10.0.0.4  | Linux |
-| web-1   |          | Public: 20.25.13.5    Private: 10.0.0.5  | Linux |
-| web-2   |          | Public: 20.25.13.5    Private: 10.0.0.6  | Linux |
-| elk     |          | Public: 20.122.99.157 Private: 10.1.0.4  | Linux |
+| Name    | Function           |              IP Address                  |  OS   |
+|---------|--------------------|------------------------------------------|-------|
+| jumpbox | Gateway            | Public: 20.127.15.15  Private: 10.0.0.4  | Linux |
+| web-1   | Web Server         | Public: 20.25.13.5    Private: 10.0.0.5  | Linux |
+| web-2   | Web Server         | Public: 20.25.13.5    Private: 10.0.0.6  | Linux |
+| elk     | ELK Server         | Public: 20.122.99.157 Private: 10.1.0.4  | Linux |
 
 ### Access Policies
 
@@ -53,12 +57,12 @@ Machines within the network can only be accessed by _____.
 
 A summary of the access policies in place can be found in the table below.
 
-| Name     | Publicly Accessible | Allowed IP Addresses |
-|----------|---------------------|----------------------|
-| Jump Box | Yes/No              | 10.0.0.1 10.0.0.2    |
-|          |                     |                      |
-|          |                     |                      |
-
+| Name          | Publicly Accessible | Allowed IP Addresses |
+|---------------|---------------------|----------------------|
+| Jumpbox       | Yes                 | 98.31.39.159         |
+| web-1         | No                  |                      |
+| web-2         | No                  |                      |
+| elk           | Yes                 | 98.31.39.159         |
 ### Elk Configuration
 
 Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because...
@@ -75,10 +79,12 @@ The following screenshot displays the result of running `docker ps` after succes
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
-- _TODO: List the IP addresses of the machines you are monitoring_
+- List the IP addresses of the machines you are monitoring.
+  Answer: web-1: 10.0.0.5 web-2: 10.0.0.6
 
 We have installed the following Beats on these machines:
-- _TODO: Specify which Beats you successfully installed_
+- Specify which Beats you successfully installed.
+  Answer: Filebeat and Metricbeat
 
 These Beats allow us to collect the following information from each machine:
 - _TODO: In 1-2 sentences, explain what kind of data each beat collects, and provide 1 example of what you expect to see. E.g., `Winlogbeat` collects Windows logs, which we use to track user logon events, etc._
