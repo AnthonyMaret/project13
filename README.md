@@ -77,7 +77,7 @@ The playbook implements the following tasks:
 - Explain the steps of the ELK installation play. E.g., install Docker; download image; etc.
 - Installed docker.io, python3, and the docker pip3 module
 - Increased the system's virtual memory, and then configured it to use the extra memory 
-- Luanched the docker elk container, and configured it so that it ran on the ports 5601,9200 and 5044
+- Launched the docker elk container, and configured it so that it ran on the ports 5601,9200 and 5044
 - Enabled docker to start on boot
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
