@@ -108,15 +108,6 @@ In order to use the playbook, you will need to have an Ansible control node alre
 SSH into the control node and follow the steps below:
 - Copy the install-elk.yml file to your ansible container.
 - Update the hosts file to include the elk group, which should include it's private ip address. You do this so you can specify future playbooks to either run on the elk group, the webservers group, or both!
-- Run the playbook, and navigate to http://public-elk-server-ip:5061/app/kibana to check that the installation worked as expected.
+- Run the playbook, using the command ansible-playbook install-ELK.yml, then navigate to http://public-elk-server-ip:5061/app/kibana to check that the installation worked as expected.
 
-Answer the following questions to fill in the blanks:
-- Which file is the playbook? Where do you copy it?
-- Answer:
-
-- Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?
-- Answer:
-
-- Which URL do you navigate to in order to check that the ELK server is running?
-- Answer: http://public-elk-server-ip:5061/app/kibana
 
